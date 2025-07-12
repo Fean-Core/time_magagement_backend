@@ -18,6 +18,7 @@ com/timemanagement/model/TimeEntry.class
 com/timemanagement/repository/CategoryRepository.class
 com/timemanagement/dto/analytics/ProductivityReport$Metrics.class
 com/timemanagement/service/UserService.class
+com/timemanagement/dto/auth/LogoutResponse.class
 com/timemanagement/exception/ResourceNotFoundException.class
 com/timemanagement/model/Task$Priority.class
 com/timemanagement/model/Category.class
