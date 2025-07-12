@@ -7,7 +7,7 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Install curl for health checks
-RUN apk add --no-cache curl
+RUN apk add --no-cache ca-certificates
 
 COPY --from=build /app/target/*.jar app.jar
 
