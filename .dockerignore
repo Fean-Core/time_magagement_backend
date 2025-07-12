@@ -4,3 +4,8 @@ target/
 .git/
 *.iml
 .vscode/
+README.md
+RENDER_DEPLOY.md
+*.md
+start.sh
+.dockerignore

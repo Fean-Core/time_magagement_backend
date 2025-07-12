@@ -3,15 +3,17 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:21-jdk-alpine
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
-# Install necessary packages for network connectivity check
-RUN apk add --no-cache iputils
+# Install curl for health checks
+RUN apk add --no-cache curl
 
 COPY --from=build /app/target/*.jar app.jar
-COPY start.sh start.sh
-RUN chmod +x start.sh
 
 EXPOSE 8080
-CMD ["./start.sh"]
+
+# Use environment variables for Java options
+ENV JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.2,TLSv1.3 -Dcom.sun.net.ssl.checkRevocation=false -Djdk.tls.trustNameService=true"
+
+CMD ["sh", "-c", "java $JAVA_OPTS -jar app.jar --spring.profiles.active=prod"]
