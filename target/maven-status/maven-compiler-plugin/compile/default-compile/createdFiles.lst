@@ -16,6 +16,7 @@ com/timemanagement/config/SecurityConfig.class
 com/timemanagement/TimeManagementApplication.class
 com/timemanagement/model/TimeEntry.class
 com/timemanagement/repository/CategoryRepository.class
+com/timemanagement/config/MongoConfig.class
 com/timemanagement/dto/analytics/ProductivityReport$Metrics.class
 com/timemanagement/service/UserService.class
 com/timemanagement/dto/auth/LogoutResponse.class

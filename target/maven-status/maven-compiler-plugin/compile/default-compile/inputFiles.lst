@@ -1,5 +1,6 @@
 /home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/security/JwtTokenUtil.java
 /home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/repository/UserRepository.java
+/home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/config/MongoConfig.java
 /home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/service/AnalyticsService.java
 /home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/controller/CategoryController.java
 /home/m496839/workspace/projects/Personal/apps/time_magagement_backend/src/main/java/com/timemanagement/model/Task.java
