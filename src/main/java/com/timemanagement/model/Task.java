@@ -171,6 +171,9 @@ public class Task {
     }
     
     public LocalDateTime getLastEditedAt() {
+        if (lastEditedAt == null) {
+            return LocalDateTime.now();
+        }
         return lastEditedAt;
     }
     
@@ -194,6 +197,12 @@ public class Task {
                 ", priority=" + priority +
                 ", status=" + status +
                 ", userId='" + userId + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", lastEditedBy='" + lastEditedBy + '\'' +
+                ", lastEditedAt=" + lastEditedAt +
+                ", isEdited=" + isEdited +
+
                 '}';
     }
 }

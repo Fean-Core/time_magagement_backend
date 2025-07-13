@@ -70,6 +70,18 @@ public class TaskService {
         if (request.getCategoryId() != null) {
             existingTask.setCategoryId(request.getCategoryId());
         }
+
+        if (request.getIsEdited() != null) {
+            existingTask.setIsEdited(request.getIsEdited());
+        }
+
+        if (request.getLastEditedBy() != null) {
+            existingTask.setLastEditedBy(request.getLastEditedBy());
+        }
+        
+        if (request.getLastEditedAt() != null) {
+            existingTask.setLastEditedAt(request.getLastEditedAt());
+        }
         
         return taskRepository.save(existingTask);
     }

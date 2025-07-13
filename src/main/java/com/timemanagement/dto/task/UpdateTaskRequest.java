@@ -26,6 +26,13 @@ public class UpdateTaskRequest {
     @JsonProperty("category_id")
     private String categoryId;
     
+    // Campos para rastreamento de edição
+    private String lastEditedBy;
+    
+    private LocalDateTime lastEditedAt;
+    
+    private Boolean isEdited;
+    
     // Default constructor
     public UpdateTaskRequest() {}
     
@@ -39,6 +46,22 @@ public class UpdateTaskRequest {
         this.dueDate = dueDate;
         this.estimatedTime = estimatedTime;
         this.categoryId = categoryId;
+    }
+    
+    // Constructor with all parameters including edit tracking
+    public UpdateTaskRequest(String title, String description, String priority, String status, 
+                           LocalDateTime dueDate, Integer estimatedTime, String categoryId,
+                           String lastEditedBy, LocalDateTime lastEditedAt, Boolean isEdited) {
+        this.title = title;
+        this.description = description;
+        this.priority = priority;
+        this.status = status;
+        this.dueDate = dueDate;
+        this.estimatedTime = estimatedTime;
+        this.categoryId = categoryId;
+        this.lastEditedBy = lastEditedBy;
+        this.lastEditedAt = lastEditedAt;
+        this.isEdited = isEdited;
     }
     
     // Getters and setters
@@ -96,5 +119,30 @@ public class UpdateTaskRequest {
     
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
+    }
+    
+    // Getters e Setters para campos de rastreamento de edição
+    public String getLastEditedBy() {
+        return lastEditedBy;
+    }
+    
+    public void setLastEditedBy(String lastEditedBy) {
+        this.lastEditedBy = lastEditedBy;
+    }
+    
+    public LocalDateTime getLastEditedAt() {
+        return lastEditedAt;
+    }
+    
+    public void setLastEditedAt(LocalDateTime lastEditedAt) {
+        this.lastEditedAt = lastEditedAt;
+    }
+    
+    public Boolean getIsEdited() {
+        return isEdited;
+    }
+    
+    public void setIsEdited(Boolean isEdited) {
+        this.isEdited = isEdited;
     }
 }
