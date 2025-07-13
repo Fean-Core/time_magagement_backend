@@ -41,6 +41,13 @@ public class Task {
     @NotNull(message = "User ID is required")
     private String userId;
     
+    // Edit tracking fields
+    private String lastEditedBy; // ID do usuário que editou por último
+    
+    private LocalDateTime lastEditedAt; // Data/hora da última edição
+    
+    private Boolean isEdited = false; // Flag indicando se a tarefa foi editada
+    
     @CreatedDate
     private LocalDateTime createdAt;
     
@@ -153,6 +160,30 @@ public class Task {
     
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+    
+    public String getLastEditedBy() {
+        return lastEditedBy;
+    }
+    
+    public void setLastEditedBy(String lastEditedBy) {
+        this.lastEditedBy = lastEditedBy;
+    }
+    
+    public LocalDateTime getLastEditedAt() {
+        return lastEditedAt;
+    }
+    
+    public void setLastEditedAt(LocalDateTime lastEditedAt) {
+        this.lastEditedAt = lastEditedAt;
+    }
+    
+    public Boolean getIsEdited() {
+        return isEdited;
+    }
+    
+    public void setIsEdited(Boolean isEdited) {
+        this.isEdited = isEdited;
     }
     
     @Override
